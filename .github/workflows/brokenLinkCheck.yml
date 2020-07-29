@@ -5,6 +5,9 @@ on:
   pull_request:
     branches: [ master ]
 
+env:
+  URL: https://github.com/Microsoft/QuantumKatas/
+
 jobs:
   KataBrokenLinkCheck:
     # The type of runner that the job will run on
@@ -13,7 +16,7 @@ jobs:
     steps:
     # Check out the repo under $GITHUB_WORKSPACE
     - uses: actions/checkout@v2
-      
+
     - name: Link Snitch
       uses: victoriadrake/link-snitch@v1.0.0
-      
+
